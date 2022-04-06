@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 
 export default function Logedin() {
   const [amt, setAmt] = useState(1);
@@ -9,24 +9,26 @@ export default function Logedin() {
   const[two,setTwo ] = useState();
   
   let da = {"1":31,"2":28,"3":31,"4":30,"5":31,"6":30,"7":31,"8":31,"9":30,"10":31,"11":30,"12":31};
-  useEffect(()=>{
-     if (dd + 1 > da[dm]) {
-       dd =  ((dd + 1) % da[dm]);
-       dm === 12 ? (dm = 1) : dm++;
-     } else dd = dd + 1;
-      setOne(dd + "/" + dm);
-     if (dd + 1 > da[dm]) {
-       dd = ((dd + 1) % da[dm]);
-       dm === 12 ? (dm = 1) : dm++;
-     } else dd = dd + 1;
-      setTwo (dd + "/" + dm);
-  })
+  function run(){
+    if (dd + 1 > da[dm]) {
+      dd = (dd + 1) % da[dm];
+      dm === 12 ? (dm = 1) : dm++;
+    } else dd = dd + 1;
+    setOne(dd + "/" + dm);
+    if (dd + 1 > da[dm]) {
+      dd = (dd + 1) % da[dm];
+      dm === 12 ? (dm = 1) : dm++;
+    } else dd = dd + 1;
+    setTwo(dd + "/" + dm);
+  }
+  run();
+     
  
   
   
   
   
-  const [date, setDate] = useState();
+  
   return (
     <>
       <div className="box center">

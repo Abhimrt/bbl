@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import link from "../../link/user"
 
 export default function Login() {
   const navigate = useNavigate();
@@ -10,8 +11,12 @@ export default function Login() {
     setMob(e);
   }
   const done=()=>{
-    if(mob.length===10 && pass>=8)
-     alert("verified")
+    if(mob.length===10 && pass.length>=8){
+    link.login({
+      "phone":mob,
+      "password":pass
+    })
+    }
     else {
       alert("Enter Valid details");
     }
