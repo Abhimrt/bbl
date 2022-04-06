@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Work Sans', sans-serif;
+}
+:root{
+    --grn: rgb(11, 171, 11);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fc{
+    flex-direction: column;
+}
+button{
+    background-color: transparent;
+    outline: none;
+    // border: none;
+    border: 3px solid var(--grn);
+    border-radius: 30px;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    transform: scale(0.90);
+    transition: .3s all ease;
+    text-transform: uppercase;
+    background-color: rgba(126, 188, 126, 0.6);
+    color: rgb(65, 64, 64);
+}
+button:hover{
+    background-color: rgb(11, 171, 11);
+    color: white;
+   transform: scale(1);
+}
+button:active{
+    transform: scale(.90);
+}
+.heading{
+    font-size: 4rem;
+    margin: 2rem;
+    text-align: center;
+    color: var(--grn);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.heading1{
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+    color: var(--grn);
+    text-transform: uppercase;
+}
+.main{
+    height: 90vh;
+    flex-direction: column;
+}
+.Main{
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0.4)) ,url("../images/garbage-truck.jpg") center ;
+    background-size: 50%;
+    background-position-x: 60vw;
+    background-repeat: no-repeat;
+}
+.Main img{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 5rem;
+    cursor: pointer;
+}
+.box{
+    width: 100vw;
+    min-height: 70vh;
+    flex-direction: column;
+    // border: 1px solid black;
+    padding: 0 .5rem;
+}
+input,select{
+    width: 20rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: 10px;
+    max-width: 90vw;
+}
+.link{
+    color: blue;
+    cursor: pointer;
+}
+// responsive area
+@media (max-width: 900px) {
+    html{
+        font-size: 80%;
+    }
+    .Main{
+        background-position: 10vw 60vh;
+        background-size: 80%;
+    }
+}
+
