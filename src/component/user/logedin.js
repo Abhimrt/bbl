@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 export default function Logedin() {
   const [amt, setAmt] = useState(1);
   let d = new Date();
-  // let dd = d.getDate();
-  // let dm =d.getMonth()+1
-  let dd = 27;
-  let dm = 2;
+  let dd = d.getDate();
+  let dm =d.getMonth()+1
   const[one,setOne ] = useState();
   const[two,setTwo ] = useState();
   
