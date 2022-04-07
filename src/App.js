@@ -4,15 +4,14 @@ import User from './component/user/user';
 import Admin from './component/admin/admin';
 import Driver from './component/driver/driver';
 import Main from "./main";
-// import "./css/style.css"
+import "./css/style.css"
 import "leaflet/dist/leaflet.css"
 import Second from "./maps/second";
 
 
 function App() {
   // const navigate = useNavigate();
-  // const pincode = require("pincode-lat-long");
-  // console.log(pincode.getlatlong(250001));
+  
 
      
   return (
@@ -24,8 +23,6 @@ function App() {
             alt=""
           />
         </NavLink>
-        <div id="map" style={{height:"60vh"}}>f
-        </div>
           <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/user/*" element={<User />} />
