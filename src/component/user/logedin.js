@@ -4,31 +4,36 @@ export default function Logedin() {
   const [amt, setAmt] = useState(1);
   let d = new Date();
   let dd = d.getDate();
-  let dm =d.getMonth()+1
-  const[one,setOne ] = useState();
-  const[two,setTwo ] = useState();
-  
-  let da = {"1":31,"2":28,"3":31,"4":30,"5":31,"6":30,"7":31,"8":31,"9":30,"10":31,"11":30,"12":31};
-  function run(){
-    if (dd + 1 > da[dm]) {
-      dd = (dd + 1) % da[dm];
-      dm === 12 ? (dm = 1) : dm++;
-    } else dd = dd + 1;
-    setOne(dd + "/" + dm);
-    if (dd + 1 > da[dm]) {
-      dd = (dd + 1) % da[dm];
-      dm === 12 ? (dm = 1) : dm++;
-    } else dd = dd + 1;
-    setTwo(dd + "/" + dm);
-  }
-  run();
-     
+  let dm = d.getMonth() + 1;
+  let one,two
+
+  let da = {
+    1: 31,
+    2: 28,
+    3: 31,
+    4: 30,
+    5: 31,
+    6: 30,
+    7: 31,
+    8: 31,
+    9: 30,
+    10: 31,
+    11: 30,
+    12: 31,
+  };
+  // logic for date
+  if (dd + 1 > da[dm]) {
+    dd = (dd + 1) % da[dm];
+    dm === 12 ? (dm = 1) : dm++;
+  } else dd = dd + 1;
+  one = `${dd}/${dm}`;
+  if (dd + 1 > da[dm]) {
+    dd = (dd + 1) % da[dm];
+    dm === 12 ? (dm = 1) : dm++;
+  } else dd = dd + 1;
+  two= `${dd}/${dm}`;
  
-  
-  
-  
-  
-  
+
   return (
     <>
       <div className="box center">

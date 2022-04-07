@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import link from "../../link/user"
 
 export default function Login() {
+  
   const navigate = useNavigate();
   const [mob, setMob] = useState("");
   const [pass, setPass] = useState("");
