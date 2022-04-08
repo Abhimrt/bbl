@@ -7,7 +7,7 @@ import {
 
 ReactDOM.render(
   // basename="/bbl"
-  <Router basename="/bbl">
+  <Router >
     <App />
   </Router>,
   document.getElementById("root")
