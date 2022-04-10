@@ -102,6 +102,23 @@ input, select {
   cursor: pointer;
 }
 
+.table {
+  width: 80vh;
+  margin: auto;
+}
+
+.logout {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 20px;
+  right: 20px;
+  background-color: var(--grn);
+  color: white;
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   html {
     font-size: 80%;

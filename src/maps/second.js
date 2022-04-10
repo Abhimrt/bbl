@@ -4,9 +4,9 @@ import "leaflet/dist/leaflet.css";
 
 export default function Second() {
   useEffect(() => {
-    var map = L.map("map").setView([29.018865, 77.768095], 10);
+    let map = L.map("map").setView([29.018865, 77.768095], 10);
     //for different view we can go https://leaflet-extras.github.io/leaflet-providers/preview/
-    var  googleStreets = L.tileLayer(
+    var googleStreets = L.tileLayer(
       "http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
       {
         maxZoom: 20,
@@ -14,6 +14,29 @@ export default function Second() {
       }
     );
     googleStreets.addTo(map);
+     let a = L.Routing.control({
+       waypoints: [
+         [29.018865, 77.768095],
+         [28.70406, 77.102493],
+       ],
+     });
+     a.addTo(map);
+    // if (!navigator.geolocation) {
+    //   alert("Your browser doesn't support geolocation feature!");
+    // } else {
+    //   navigator.geolocation.getCurrentPosition(getPosition);
+    // }
+    // function getPosition(position) {
+    //   let lat = position.coords.latitude;
+    //   let long = position.coords.longitude;
+    //   let a = L.Routing.control({
+    //     waypoints: [
+    //       [29.018865, 77.768095],
+    //       [28.70406, 77.102493],
+    //     ],
+    //   });
+    //   a.addTo(map);
+    // }
   }, []);
 
   return (

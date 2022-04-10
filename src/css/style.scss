@@ -89,6 +89,21 @@ input,select{
     color: blue;
     cursor: pointer;
 }
+.table{
+    width: 80vh;
+    margin: auto;
+}
+.logout{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    top: 20px;
+    right: 20px;
+    background-color: var(--grn);
+    color: white;
+    cursor: pointer;
+}
 // responsive area
 @media (max-width: 900px) {
     html{

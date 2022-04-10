@@ -4,9 +4,11 @@ import User from './component/user/user';
 import Admin from './component/admin/admin';
 import Driver from './component/driver/driver';
 import Main from "./main";
-import "./css/style.css"
 import "leaflet/dist/leaflet.css"
-import Second from "./maps/second";
+import "./css/style.css"
+import "./css/Map.css"
+// import Second from "./maps/second";
+import Map from "./maps/map";
 
 
 function App() {
@@ -28,8 +30,6 @@ function App() {
           <Route path="/user/*" element={<User />} />
           <Route path="/admin/*" element={<Admin />} />
           <Route path="/driver/*" element={<Driver />} />
-          <Route path="/driver/*" element={<Driver />} />
-          <Route path="/map" element={<Second/>}/>
           <Route path="*" element={<Navigate to={"/"} />} />
         </Routes>
       </div>

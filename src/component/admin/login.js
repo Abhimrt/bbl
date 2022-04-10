@@ -1,16 +1,25 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import link from "../../link/admin";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [adminid,setAdminid] = useState("");
   const [pass,setPass] = useState("");
-  const done=()=>{
-    alert("done");
+
+  // sending request and velidation
+  const done= async()=>{
+    let a = await link.Login({
+      password: pass,
+      email: adminid,
+    });
+    if(a) navigate("/admin/logedin")
   }
   return (
     <div className="box center">
       <div className="heading1">Login</div>
       <input
-        type="text"
+        type="mail"
         placeholder="Admin id"
         value={adminid}
         onChange={(e) => setAdminid(e.target.value)}

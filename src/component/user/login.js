@@ -7,16 +7,24 @@ export default function Login() {
   const navigate = useNavigate();
   const [mob, setMob] = useState("");
   const [pass, setPass] = useState("");
+
+  // mobile no validation=================
   const Mob = (e)=>{
     if(e.length<=10)
     setMob(e);
   }
-  const done=()=>{
-    if(mob.length===10 && pass.length>=8){
-    link.login({
-      "phone":mob,
-      "password":pass
-    })
+
+  // done sending request =============
+  const done=async()=>{
+     if(mob.length===10 && pass.length>=8){
+    let a  = await link.Login({
+      phone: mob,
+      password: pass,
+    });
+    console.log(a);
+    if(a===true){
+      navigate("/user/logedin")
+    }
     }
     else {
       alert("Enter Valid details");
