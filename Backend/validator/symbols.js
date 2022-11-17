@@ -89,16 +89,4 @@ const truck = (string) => {
     return true
 }
 
-const slot = (string)=>{
-    if(0<string<12){
-        return 1
-    }
-    else if (12<string<17){
-        return 2
-    }
-    else{
-        return3
-    }
-}
-
-module.exports = { symbols, miet, num, name, bookName, subject, truck,slot }
+module.exports = { symbols, miet, num, name, bookName, subject, truck }

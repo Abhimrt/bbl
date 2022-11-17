@@ -27,10 +27,6 @@ const RequestsSchema = new Schema({
         type : String,
         required : true
     },
-    amount:{
-        type : Number,
-        required : true
-    },
     timestamp:{
         type: Date,
         default: Date.now

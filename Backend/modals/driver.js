@@ -2,12 +2,8 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const DriverSchema = new Schema({
-    zone:{
+    name:{
         type: String,
-        required: true
-    },
-    pincode:{
-        type: Number,
         required: true
     },
     truckID:{

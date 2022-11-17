@@ -16,11 +16,11 @@ router.post('/login',
         body('password', 'Enter password').exists().isLength({ min: 8 }),
     ],
     async (req, res) => {
-        if (!validationResult(req).isEmpty()) {
-            return res.status(400).json({ success: false, errors: validationResult(req).array() });
-        }
+        const { email, password } = req.body
         try {
-            const { email, password } = req.body
+            if (!validationResult(req).isEmpty()) {
+                return res.status(400).json({ success: false, errors: validationResult(req).array() });
+            }
             let admin = await Admin.findOne({ email }).select(['_id','name','email','password'])
             if (!admin) {
                 return res.status(401).json({ success: false, error: "Please try to login with correct credentials" });
@@ -49,12 +49,14 @@ router.post('/fetch', fetchadmin, async (req, res) => {
         if (!req.admin) {
             return res.status(401).send({ success: false, error: 'Please enter the valid token1' })
         }
-        const admin = await Admin.findById(req.admin.id)
+        console.log(req.admin)
+        console.log(req.admin.id)
+        const admin = await Admin.findById(req.admin.id).select(['name','email'])
         if (!admin) {
-            return res.status(401).send({ success: false,admin, error: 'Please enter the valid token' })
+            return res.status(401).send({ success: false,admin, error: 'Please enter the valid token2' })
         }
         else {
-            res.send({ success: true, user:removepassword(admin) })
+            res.send({ success: true, user:admin })
         }
     } catch (error) {
         res.status(500).send({ success: false, error: "Internal Server Error" });

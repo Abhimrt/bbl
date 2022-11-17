@@ -1,10 +1,8 @@
 const express = require('express');
-const cors =require('cors')
 const connect = require('./db')
 connect();
 const app = express()
-const port = 5001
-app.use(cors())
+const port = 5000
 app.use(express.json())
 // Available Routes
 app.use('/api/user',require('./routes/user'))

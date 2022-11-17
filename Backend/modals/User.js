@@ -23,14 +23,6 @@ const UserSchema = new Schema({
         type : String,
         required : true
     },
-    latitude:{
-        type : String,
-        required : true
-    },
-    longitude:{
-        type : String,
-        required : true
-    },
     timestamp:{
         type: Date,
         default: Date.now
