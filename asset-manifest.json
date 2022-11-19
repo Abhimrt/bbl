@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/bbl/static/css/main.52cb8b19.css",
-    "main.js": "/bbl/static/js/main.360ec52c.js",
+    "main.css": "/bbl/static/css/main.4f17f200.css",
+    "main.js": "/bbl/static/js/main.d8c699d2.js",
     "static/media/user.png": "/bbl/static/media/user.c6c09b54a6c525fdf88a.png",
     "static/media/garbage-truck.jpg": "/bbl/static/media/garbage-truck.cda7cec347495464029f.jpg",
     "static/media/logo.jpeg": "/bbl/static/media/logo.1528ecbf23f423ba32fe.jpeg",
     "index.html": "/bbl/index.html",
-    "main.52cb8b19.css.map": "/bbl/static/css/main.52cb8b19.css.map",
-    "main.360ec52c.js.map": "/bbl/static/js/main.360ec52c.js.map"
+    "main.4f17f200.css.map": "/bbl/static/css/main.4f17f200.css.map",
+    "main.d8c699d2.js.map": "/bbl/static/js/main.d8c699d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.52cb8b19.css",
-    "static/js/main.360ec52c.js"
+    "static/css/main.4f17f200.css",
+    "static/js/main.d8c699d2.js"
   ]
 }
