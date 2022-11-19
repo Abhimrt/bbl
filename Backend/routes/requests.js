@@ -9,6 +9,9 @@ const Requests = require('../modals/Requests')
 const User = require('../modals/User')
 const Admin = require('../modals/Admin')
 const Driver = require('../modals/driver');
+const sendMail = require('../validator/sendmail');
+const { CLOSING } = require('ws');
+const { ReactSimpleChatbot } = require('react-simple-chatbot');
 // const { promise } = require('bcrypt/promises');
 
 //  All the pending requests of the user
@@ -363,4 +366,20 @@ router.delete('/delete/:id', fetchadmin, fetchuser, fetchdriver, async (req, res
         res.status(500).send({ success: false, error: 'Internal server error' })
     }
 })
+
+// mail send
+router.post('/mail',
+    async (req, res) => {
+        try{
+            let status_mail = await sendMail(req.body.mail).then(()=>{
+                return res.status(200).status({success:true})
+            }).catch(()=>{
+                return res.status(501).status({success:false})
+            })
+        } catch (error) {
+            console.error({ error })
+            res.status(500).send({ success: false, error: 'Internal server error' })
+        }
+    })
+
 module.exports = router

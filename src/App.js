@@ -110,7 +110,10 @@ function App() {
           chat ? (
             <button onClick={() => (chat) ? setChat(false) : setChat(true)} className="chat"> Chat with us </button>
           ) : (
-            <ChatBot className="chat" steps={steps}></ChatBot>
+            <>
+              <button className="chat_close" onClick={() => (!chat) ? setChat(true) : setChat(false)}>close chat</button>
+              <ChatBot className="chat" steps={steps}></ChatBot>
+            </>
           )
         }
 

@@ -33,7 +33,12 @@
 
 /* chatbot */
 .chat{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right:0;
+}
+.chat_close{
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
