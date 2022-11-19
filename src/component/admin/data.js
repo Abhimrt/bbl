@@ -139,7 +139,7 @@ export default function Data() {
             userreq.map((e, i) => {
               return (
                 <tr key={i}>
-                  <td>{e.user}</td>
+                  <td>{e.date}</td>
                   <td>{e.time} slot</td>
                   <td>{e.wasteType}</td>
                 </tr>

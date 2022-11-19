@@ -213,7 +213,7 @@ export default function Logedin() {
       >
         <thead>
           <tr>
-            <th scope="col">User</th>
+            <th scope="col">Date</th>
             <th scope="col">Amount</th>
             <th scope="col">Type</th>
           </tr>
@@ -227,7 +227,8 @@ export default function Logedin() {
                   onClick={() => locate(e.user)}
                   style={{ cursor: "pointer" }}
                 >
-                  <td>{e.user}</td>
+                  {console.log(e)}
+                  <td>{e.name}</td>
                   <td>{e.amount}kg</td>
                   <td>{e.wasteType}</td>
                 </tr>

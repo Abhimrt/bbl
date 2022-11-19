@@ -17,6 +17,10 @@ export default function Logedin() {
 
   }, []);
 
+  const filldata = async () => {
+    let a = await links.pending();
+    setReq(a.Request);
+  }
   //validation for date ===================
   let d = new Date();
   let dd = d.getDate();
@@ -56,7 +60,9 @@ export default function Logedin() {
         wasteType: type,
         amount: amt,
       });
+
     } else alert("enter all details properly");
+    // filldata();
   }
   //logout ==========================
   function logout() {
