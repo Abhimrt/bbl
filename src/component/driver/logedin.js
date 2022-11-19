@@ -213,7 +213,7 @@ export default function Logedin() {
       >
         <thead>
           <tr>
-            <th scope="col">Date</th>
+            <th scope="col">Slot</th>
             <th scope="col">Amount</th>
             <th scope="col">Type</th>
           </tr>
@@ -228,7 +228,7 @@ export default function Logedin() {
                   style={{ cursor: "pointer" }}
                 >
                   {console.log(e)}
-                  <td>{e.name}</td>
+                  <td>{e.time}</td>
                   <td>{e.amount}kg</td>
                   <td>{e.wasteType}</td>
                 </tr>
